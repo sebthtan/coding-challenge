@@ -13,6 +13,6 @@ module.exports.run = async function(url){
 		const res = await axios.get(url)
 		return res
 	} catch (e) {
-		return `${e}`
+		return `Error: ${e.message}`
 	}
 };
