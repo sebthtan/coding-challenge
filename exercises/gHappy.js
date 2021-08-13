@@ -21,7 +21,6 @@ Return true if all the g's in the given string are happy, otherwise return false
 		visited.push(idx)
 		idx = str.indexOf('g', idx + 1)
 	}
-	console.log(visited)
 
 	visited.forEach(idx => {
 		const prev = str[idx - 1].toLowerCase()
