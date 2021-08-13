@@ -15,6 +15,25 @@ module.exports.run = function(csv){
 
 	Write your code below the comment.
 */
+	const res = []
+	const lines = csv.split('/n')
+
+	const categories = lines[0].split(',')
+	const csvWithoutCategories = lines.slice(1)
+
+	for (let i = 0; i < csvWithoutCategories.length; i ++) {
+		const obj = {}
+		const data = csvWithoutCategories[i].split(',')
+		
+		for (let j = 0; j < categories.length; j ++) {
+			const category = categories[j]
+
+			obj[category] = data[j]
+		}
+
+		res.push(obj)
+	}
+
+	return res
 
 };
-
